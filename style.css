@@ -1,0 +1,503 @@
+/* ========================================
+   GENERAL STYLES & RESET
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #1E2A38;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   HEADER & NAVIGATION
+   ======================================== */
+
+#header {
+    background-color: #1E2A38;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #4EA5D9;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFD166;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+    background: linear-gradient(135deg, #4EA5D9 0%, #1E2A38 100%);
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero .subheadline {
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #FFD166;
+    color: #1E2A38;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 209, 102, 0.3);
+}
+
+.btn:hover {
+    background-color: #ffc233;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 209, 102, 0.4);
+}
+
+.video-container {
+    margin-top: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.video-container iframe {
+    border-radius: 10px;
+    min-height: 400px;
+}
+
+.video-note {
+    margin-top: 15px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* ========================================
+   PROBLEM SECTION
+   ======================================== */
+
+.problem {
+    background-color: #f9fafb;
+    padding: 80px 20px;
+}
+
+.problem h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1E2A38;
+}
+
+.problem > .container > p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 18px;
+}
+
+.problem-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #4EA5D9;
+}
+
+/* ========================================
+   SOLUTION SECTION
+   ======================================== */
+
+.solution {
+    background-color: #ffffff;
+    padding: 80px 20px;
+}
+
+.solution h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1E2A38;
+}
+
+.intro-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 18px;
+}
+
+.feature-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.feature-box {
+    background-color: #f9fafb;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-color: #4EA5D9;
+}
+
+.feature-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1E2A38;
+}
+
+/* ========================================
+   PROJECT MANAGEMENT SECTION
+   ======================================== */
+
+.project-management {
+    background-color: #f9fafb;
+    padding: 80px 20px;
+}
+
+.project-management h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1E2A38;
+}
+
+.pm-content h3 {
+    font-size: 26px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #4EA5D9;
+}
+
+.pm-content p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.pm-content ul {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.pm-content ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* WBS Table */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+.wbs-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.wbs-table thead {
+    background-color: #4EA5D9;
+    color: #ffffff;
+}
+
+.wbs-table th,
+.wbs-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.wbs-table th {
+    font-weight: 600;
+}
+
+.wbs-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.wbs-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+
+.about {
+    background-color: #ffffff;
+    padding: 80px 20px;
+}
+
+.about h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1E2A38;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+
+.contact {
+    background-color: #f9fafb;
+    padding: 80px 20px;
+}
+
+.contact h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1E2A38;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-content > p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.contact-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1E2A38;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4EA5D9;
+}
+
+.contact-form .btn {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+
+.contact-info {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    background-color: #1E2A38;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero .subheadline {
+        font-size: 18px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        display: none; /* Bei mobiler Nutzung kann ein Hamburger-Menü ergänzt werden */
+    }
+    
+    #header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .problem h2,
+    .solution h2,
+    .project-management h2,
+    .about h2,
+    .contact h2 {
+        font-size: 32px;
+    }
+    
+    .video-container iframe {
+        min-height: 300px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero .subheadline {
+        font-size: 16px;
+    }
+    
+    .btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+    
+    .problem-boxes,
+    .feature-boxes {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+        padding: 25px;
+    }
+    
+    .video-container iframe {
+        min-height: 250px;
+    }
+    
+    .wbs-table th,
+    .wbs-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
