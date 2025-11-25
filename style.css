@@ -97,7 +97,7 @@ body {
    ======================================== */
 
 .hero {
-    background: linear-gradient(135deg, #4EA5D9 0%, #1E2A38 100%);
+    background: linear-gradient(135deg, #4EA5D9 0%, #2d7a9e 50%, #1E2A38 100%);
     color: #ffffff;
     padding: 120px 20px 80px;
     text-align: center;
@@ -112,9 +112,22 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 209, 102, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(78, 165, 217, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 .hero-content {
@@ -165,7 +178,7 @@ body {
 }
 
 /* ========================================
-   VIDEO CONTAINER - RESPONSIVE
+   VIDEO CONTAINER - OPTIMIERT
    ======================================== */
 
 .video-container {
@@ -173,11 +186,31 @@ body {
     width: 100%;
     max-width: 900px;
     margin: 60px auto 0;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.15) 0%, 
+        rgba(78, 165, 217, 0.2) 50%, 
+        rgba(255, 209, 102, 0.15) 100%);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.video-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #FFD166, #4EA5D9, #1E2A38);
+    border-radius: 26px;
+    z-index: -1;
+    opacity: 0.3;
+    filter: blur(8px);
 }
 
 .video-container::after {
@@ -188,12 +221,13 @@ body {
 
 .video-container iframe {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    top: 25px;
+    left: 25px;
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
     border: none;
-    border-radius: 12px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* ========================================
@@ -649,14 +683,14 @@ footer p {
     }
     
     .video-container {
-        padding: 15px;
+        padding: 20px;
     }
     
     .video-container iframe {
-        top: 15px;
-        left: 15px;
-        width: calc(100% - 30px);
-        height: calc(100% - 30px);
+        top: 20px;
+        left: 20px;
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
     }
 }
 
@@ -680,15 +714,15 @@ footer p {
     }
     
     .video-container {
-        padding: 12px;
+        padding: 15px;
         margin-top: 40px;
     }
     
     .video-container iframe {
-        top: 12px;
-        left: 12px;
-        width: calc(100% - 24px);
-        height: calc(100% - 24px);
+        top: 15px;
+        left: 15px;
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
     }
     
     .problem,
