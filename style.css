@@ -394,7 +394,10 @@ body {
     color: #555;
 }
 
-/* Calendly Section Styles */
+/* ===========================
+   CALENDLY SECTION STYLES
+   =========================== */
+
 .calendly-section {
     margin-bottom: 3rem;
     padding: 2.5rem;
